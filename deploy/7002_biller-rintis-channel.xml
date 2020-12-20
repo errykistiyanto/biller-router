@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<channel-adaptor class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" name="biller-rintis-channel" realm="biller-rintis-channel">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="co.id.middleware.router.iso.ISO87APackager">
+
+    <property name="host" value="10.100.111.152"/>
+    <property name="port" value="12000"/>
+
+    </channel>
+    <in>biller-rintis-channel-in</in>
+    <out>biller-rintis-channel-out</out>
+    <ready>biller-rintis-channel.ready</ready>
+    <unhandled>biller-rintis-channel-unhandled</unhandled>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>
